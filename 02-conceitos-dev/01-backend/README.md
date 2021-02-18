@@ -50,6 +50,8 @@
 
 :heavy_check_mark: Uuid
 
+:heavy_check_mark: Insomnia
+
 ## Instalações
 
 :boom: mkdir conceitos-dev/backend -> Criando as pastas
