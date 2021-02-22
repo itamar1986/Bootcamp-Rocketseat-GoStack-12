@@ -12,37 +12,37 @@ export default function App() {
         });
     }, []);
 
-    async function handleAppProject() {
+    async function handleAddProject() {
         const response = await api.post('projects', {
             title: `Novo projeto ${Date.now()}`,
-            owner: 'Itamar'
+            owner: 'Itamar Silva'
         });
 
         const project = response.data;
 
         setProjects([...projects, project]);
     }
-    
+
     return (
         <>
             <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
 
-            <SafeAreaView style={style.container}>
+            <SafeAreaView style={styles.container}>
                 <FlatList
                     data={projects}
                     keyExtractor={project => project.id}
                     renderItem={({ item: project }) => (
                         <Text style={styles.project}>{project.title}</Text>
-                )}
-            />
+                    )}
+                />
 
-            <TouchableOpacity 
-                activeOpacity={0.6} 
-                style={styles.button} 
-                onPress={handleAppProject}
-            >
-                <Text style={styles.buttonText}>Adicionar Projeto</Text>
-            </TouchableOpacity>
+                <TouchableOpacity
+                    activeOpacity={0.6}
+                    style={styles.button}
+                    onPress={handleAddProject}
+                >
+                    <Text style={styles.buttonText}>Adicionar projeto</Text>
+                </TouchableOpacity>
             </SafeAreaView>
         </>
     );
@@ -55,12 +55,12 @@ const styles = StyleSheet.create({
     },
 
     project: {
-        color: '#FFF',
+        color: '#fff',
         fontSize: 30,
     },
 
     button: {
-        backgroundColor: '#FFF',
+        backgroundColor: '#fff',
         margin: 20,
         height: 50,
         borderRadius: 4,
@@ -71,6 +71,5 @@ const styles = StyleSheet.create({
     buttonText: {
         fontWeight: 'bold',
         fontSize: 16,
-
     }
 });
