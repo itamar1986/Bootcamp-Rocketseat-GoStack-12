@@ -50,6 +50,8 @@
 
 :heavy_check_mark: Uuid
 
+:heavy_check_mark: Cors
+
 :heavy_check_mark: Insomnia
 
 ## Instalações
@@ -73,6 +75,8 @@
 :boom: yarn add uuidv4 -> Pacote descontinuado
 
 :boom: yarn add uuid -> Criar ids exclusivos
+
+:boom: yarn add cors
 
 ## Vídeo do projeto
 
