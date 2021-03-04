@@ -1,5 +1,4 @@
 import IStorageProvider from '../models/IStorageProvider';
-import { th } from 'date-fns/locale';
 
 class FakeStorageProvider implements IStorageProvider {
   private storage: string[] = [];

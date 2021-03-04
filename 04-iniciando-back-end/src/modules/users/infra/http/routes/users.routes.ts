@@ -1,7 +1,8 @@
 import { Router } from 'express';
 import multer from 'multer';
+import { celebrate, Joi, Segments } from 'celebrate';
+
 import uploadConfig from '@config/upload';
-import { celebrate, Segments, Joi } from 'celebrate';
 
 import UsersController from '../controllers/UsersController';
 import UserAvatarController from '../controllers/UserAvatarController';
@@ -23,7 +24,7 @@ usersRouter.post(
       password: Joi.string().required(),
     },
   }),
-  usersController.create
+  usersController.create,
 );
 
 usersRouter.patch(
@@ -32,5 +33,4 @@ usersRouter.patch(
   upload.single('avatar'),
   userAvatarController.update,
 );
-
 export default usersRouter;

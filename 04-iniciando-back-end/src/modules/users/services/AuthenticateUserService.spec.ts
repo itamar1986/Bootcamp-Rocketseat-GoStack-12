@@ -21,41 +21,41 @@ describe('AuthenticateUser', () => {
 
   it('should be able to authenticate', async () => {
     const user = await fakeUsersRepository.create({
-      name: 'Aniele Jesus',
-      email: 'aniele@exemplo.com',
-      password: '123456',
+      name: 'John Doe',
+      email: 'johndoe@example.com',
+      password: '123123',
     });
 
     const response = await authenticateUser.execute({
-      email: 'aniele@exemplo.com',
-      password: '123456',
+      email: 'johndoe@example.com',
+      password: '123123',
     });
 
     expect(response).toHaveProperty('token');
     expect(response.user).toEqual(user);
   });
 
-  it('should not be able to authenticate with non existing user', async () => {
-      await expect(
-        authenticateUser.execute({
-        email: 'aniele@exemplo.com',
-        password: '123456',
+  it('should not be able to authenticate with a non existing user', async () => {
+    await expect(
+      authenticateUser.execute({
+        email: 'johndoe@example.com',
+        password: '123123',
       }),
-      ).rejects.toBeInstanceOf(AppError);
+    ).rejects.toBeInstanceOf(AppError);
   });
 
-  it('should be able to authenticate with wrong password', async () => {
+  it('should not be able to authenticate with wrong password', async () => {
     await fakeUsersRepository.create({
-      name: 'Aniele Jesus',
-      email: 'aniele@exemplo.com',
-      password: '123456',
+      name: 'John Doe',
+      email: 'johndoe@example.com',
+      password: '123123',
     });
 
     await expect(
       authenticateUser.execute({
-        email: 'aniele@exemplo.com',
+        email: 'johndoe@example.com',
         password: 'wrong-password',
-    }),
+      }),
     ).rejects.toBeInstanceOf(AppError);
   });
 });

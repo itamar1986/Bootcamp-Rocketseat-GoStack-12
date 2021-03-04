@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { celebrate, Segments, Joi } from 'celebrate';
+import { celebrate, Joi, Segments } from 'celebrate';
 
 import ForgotPasswordController from '../controllers/ForgotPasswordController';
 import ResetPasswordController from '../controllers/ResetPasswordController';
@@ -24,9 +24,13 @@ passwordRouter.post(
     [Segments.BODY]: {
       token: Joi.string().uuid().required(),
       password: Joi.string().required(),
-      password_confirmation: Joi.string().required().valid(Joi.ref('password')),
+      password_confirmation: Joi.string().valid(Joi.ref('password')),
     },
   }),
-  resetPasswordController.create);
+  resetPasswordController.create,
+);
+
+passwordRouter.post('/forgot', forgotPasswordController.create);
+passwordRouter.post('/reset', resetPasswordController.create);
 
 export default passwordRouter;

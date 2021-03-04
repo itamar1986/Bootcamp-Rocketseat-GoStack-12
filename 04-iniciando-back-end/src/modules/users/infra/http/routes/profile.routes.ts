@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { celebrate, Segments, Joi } from 'celebrate';
+import { celebrate, Joi, Segments } from 'celebrate';
 
 import ProfileController from '../controllers/ProfileController';
 
@@ -14,7 +14,7 @@ profileRouter.get('/', profileController.show);
 profileRouter.put(
   '/',
   celebrate({
-    [ Segments.BODY]: {
+    [Segments.BODY]: {
       name: Joi.string().required(),
       email: Joi.string().email().required(),
       old_password: Joi.string(),
@@ -22,6 +22,7 @@ profileRouter.put(
       password_confirmation: Joi.string().valid(Joi.ref('password')),
     },
   }),
-  profileController.update);
+  profileController.update,
+);
 
 export default profileRouter;

@@ -1,4 +1,4 @@
-import { uuid } from 'uuidv4';
+import { v4 as uuid } from 'uuid';
 
 import IUserTokensRepository from '@modules/users/repositories/IUserTokensRepository';
 
@@ -14,7 +14,7 @@ class FakeUserTokensRepository implements IUserTokensRepository {
       id: uuid(),
       token: uuid(),
       user_id,
-      create_at: new Date(),
+      created_at: new Date(),
       updated_at: new Date(),
     });
 

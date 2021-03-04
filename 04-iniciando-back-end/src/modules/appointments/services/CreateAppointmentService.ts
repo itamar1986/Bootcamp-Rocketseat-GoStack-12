@@ -1,18 +1,18 @@
-import { startOfHour, isBefore, getHours, format } from 'date-fns';
 import { injectable, inject } from 'tsyringe';
+import { startOfHour, isBefore, getHours, format } from 'date-fns';
 
 import AppError from '@shared/errors/AppError';
 
 import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
-import Appointment from '../infra/typeorm/entities/Appointment';
-import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 import INotificationsRepository from '@modules/notifications/repositories/INotificationsRepository';
-import { ptBR } from 'date-fns/locale';
+import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
+
+import Appointment from '../infra/typeorm/entities/Appointment';
 
 interface IRequest {
+  date: Date;
   provider_id: string;
   user_id: string;
-  date: Date;
 }
 
 @injectable()
@@ -45,7 +45,7 @@ class CreateAppointmentService {
 
     if (getHours(appointmentDate) < 8 || getHours(appointmentDate) > 17) {
       throw new AppError(
-        'You can only create appointments between 8am and 5pm',
+        'You can only create appontments between 8am and 5pm.',
       );
     }
 
@@ -64,15 +64,11 @@ class CreateAppointmentService {
       date: appointmentDate,
     });
 
-    const appointmentDateFormatted = format(
-      appointmentDate,
-      "dd 'de' MMMM às' HH:mm'h'",
-      { locale: ptBR },
-    );
+    const dateFormatted = format(appointment.date, "dd/MM/yyyy 'às' HH:mm'h'");
 
     await this.notificationsRepository.create({
       recipient_id: provider_id,
-      content: `Novo agendamento para o dia ${appointmentDateFormatted}`,
+      content: `Novo agendamento para dia ${dateFormatted}`,
     });
 
     await this.cacheProvider.invalidate(
@@ -85,5 +81,4 @@ class CreateAppointmentService {
     return appointment;
   }
 }
-
 export default CreateAppointmentService;

@@ -9,7 +9,7 @@ let fakeStorageProvider: FakeStorageProvider;
 let updateUserAvatar: UpdateUserAvatarService;
 
 describe('UpdateUserAvatar', () => {
-  beforeEach (() => {
+  beforeEach(() => {
     fakeUsersRepository = new FakeUsersRepository();
     fakeStorageProvider = new FakeStorageProvider();
 
@@ -21,45 +21,45 @@ describe('UpdateUserAvatar', () => {
 
   it('should be able to create a new user', async () => {
     const user = await fakeUsersRepository.create({
-      name: 'Aniele Jesus',
-      email: 'aniele@exemplo.com',
+      name: 'John Doe',
+      email: 'johndoe@example.com',
       password: '123456',
     });
 
     await updateUserAvatar.execute({
       user_id: user.id,
-      avatarFilename: 'avatar.jpg'
-    })
+      avatarFilename: 'avatar.jpg',
+    });
 
     expect(user.avatar).toBe('avatar.jpg');
   });
 
-  it('should not be able to update avatar from non existing user', async () => {
+  it('should not be able update avatar from non existing user', async () => {
     await expect(
       updateUserAvatar.execute({
         user_id: 'non-existing-user',
-        avatarFilename: 'avatar.jpg'
+        avatarFilename: 'avatar.jpg',
       }),
-      ).rejects.toBeInstanceOf(AppError);
+    ).rejects.toBeInstanceOf(AppError);
   });
 
-  it('should delete old avatar when update new one', async () => {
+  it('should delete old avatar when updating new one', async () => {
     const deleteFile = jest.spyOn(fakeStorageProvider, 'deleteFile');
 
     const user = await fakeUsersRepository.create({
-      name: 'Aniele Jesus',
-      email: 'aniele@exemplo.com',
+      name: 'John Doe',
+      email: 'johndoe@example.com',
       password: '123456',
     });
 
     await updateUserAvatar.execute({
       user_id: user.id,
-      avatarFilename: 'avatar.jpg'
+      avatarFilename: 'avatar.jpg',
     });
 
     await updateUserAvatar.execute({
       user_id: user.id,
-      avatarFilename: 'avatar2.jpg'
+      avatarFilename: 'avatar2.jpg',
     });
 
     expect(deleteFile).toHaveBeenCalledWith('avatar.jpg');

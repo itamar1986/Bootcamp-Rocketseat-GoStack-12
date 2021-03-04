@@ -1,8 +1,6 @@
-// eslint-disable-next-line prettier/prettier
-import { MigrationInterface, QueryRunner, Table } from "typeorm";
+import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export default class CreateUsers1594212836424 implements MigrationInterface {
-  // eslint-disable-next-line class-methods-use-this
+export default class CreateUsers1610993852445 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
@@ -12,7 +10,6 @@ export default class CreateUsers1594212836424 implements MigrationInterface {
             name: 'id',
             type: 'uuid',
             isPrimary: true,
-            isUnique: true,
             generationStrategy: 'uuid',
             default: 'uuid_generate_v4()',
           },
@@ -23,7 +20,7 @@ export default class CreateUsers1594212836424 implements MigrationInterface {
           {
             name: 'email',
             type: 'varchar',
-            isPrimary: true,
+            isUnique: true,
           },
           {
             name: 'password',
@@ -44,7 +41,6 @@ export default class CreateUsers1594212836424 implements MigrationInterface {
     );
   }
 
-  // eslint-disable-next-line class-methods-use-this
   public async down(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.dropTable('users');
   }

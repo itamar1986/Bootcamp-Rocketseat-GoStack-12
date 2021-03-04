@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { celebrate, Segments, Joi } from 'celebrate';
+import { celebrate, Joi, Segments } from 'celebrate';
 
 import SessionsController from '../controllers/SessionsController';
 
@@ -14,6 +14,7 @@ sessionsRouter.post(
       password: Joi.string().required(),
     },
   }),
-  sessionsController.create);
+  sessionsController.create,
+);
 
 export default sessionsRouter;

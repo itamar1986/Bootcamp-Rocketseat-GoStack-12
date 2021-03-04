@@ -15,7 +15,7 @@ export default {
   defaults: {
     from: {
       email: 'itamar_minnow@hotmail.com',
-      name: 'Itamar Hotmail',
+      name: 'Itamar Silva',
     },
   },
 } as IMailConfig;

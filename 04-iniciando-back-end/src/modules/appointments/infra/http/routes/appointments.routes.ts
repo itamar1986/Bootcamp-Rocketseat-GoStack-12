@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { celebrate, Segments, Joi } from 'celebrate';
+import { celebrate, Joi, Segments } from 'celebrate';
 
 import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated';
 import AppointmentsController from '../controllers/AppointmentsController';
@@ -19,9 +19,8 @@ appointmentsRouter.post(
       date: Joi.date(),
     },
   }),
-  appointmentsController.create
+  appointmentsController.create,
 );
-
 appointmentsRouter.get('/me', providerAppointmentsController.index);
 
 export default appointmentsRouter;

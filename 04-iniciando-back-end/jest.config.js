@@ -1,5 +1,5 @@
 const { pathsToModuleNameMapper } = require('ts-jest/utils');
-const { compilerOptions } = require('./tsconfig.json')
+const { compilerOptions } = require('./tsconfig.json');
 
 module.exports = {
   // All imported modules in your tests should be mocked automatically
@@ -31,12 +31,14 @@ module.exports = {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  //coverageProvider: "v8",
 
   // A list of reporter names that Jest uses when writing coverage reports
   coverageReporters: [
-    "text-summary",
-    "lcov",
+  //   "json",
+  "text-summary",
+  "lcov",
+  //   "clover"
   ],
 
   // An object that configures minimum threshold enforcement for coverage results
@@ -145,7 +147,7 @@ module.exports = {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    "**/*.spec.ts"
+    "**/*.spec.ts",
   ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
@@ -173,7 +175,8 @@ module.exports = {
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
-  //   "/node_modules/"
+  //   "/node_modules/",
+  //   "\\.pnp\\.[^\\/]+$"
   // ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
