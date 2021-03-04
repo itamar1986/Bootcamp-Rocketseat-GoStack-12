@@ -177,19 +177,19 @@ No terminal dentro da pasta do projeto, executa a linha de comando yarn dev:serv
 
 ## Documentação
 
-> https://node-postgres.com/
+> <a href="https://node-postgres.com/" target="_blank">Node Postgres</a>
 
-> http://knexjs.org/
+> <a href="http://knexjs.org/" target="_blank">KnexJS</a>
 
-> https://sequelize.org/
+> <a href="https://sequelize.org/" target="_blank">Sequelize</a>
 
-> https://typeorm.io/#/
+> <a href="https://typeorm.io/#/" target="_blank">Typeorm</a>
 
-> https://www.notion.so/003-Instalando-Docker-eccbaa63fbb847798753bc92ef974322
+> <a href="https://www.notion.so/003-Instalando-Docker-eccbaa63fbb847798753bc92ef974322" target="_blank">Instalando Docker</a>
 
-> http://www.md5.cz/
+> <a href="http://www.md5.cz/" target="_blank">MD5</a>
 
-> https://jwt.io/
+> <a href="https://jwt.io/" target="_blank">JWT</a>
 
 ## Desenvolvedores/Contribuintes :octocat:
 
