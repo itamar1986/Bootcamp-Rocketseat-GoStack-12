@@ -75,7 +75,7 @@ No terminal dentro da pasta do projeto, executa a linha de comando: node src/ind
 
 ## Documentação
 
-> <a href="https://www.notion.so/05-Guia-Typescript-71be7ea1933d40dcb51448368ac58a32" target="_blank">Guia Typescript</a>
+> <a href="https://www.notion.so/Typescript-5712aeab312d44fcba0aa88895caad36" target="_blank">Guia Typescript</a>
 
 ## Desenvolvedores/Contribuintes :octocat:
 
