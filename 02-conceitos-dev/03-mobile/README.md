@@ -87,7 +87,7 @@ Modelo da arquitetura usada no projeto.
 
 > <a href="https://medium.com/nerdzao/configurando-react-native-com-android-studio-no-ubuntu-18-04-e305f386f4b7" target="_blank">React Native - android / ubuntu</a>
 
-> <a href="https://www.notion.so/03-Configurando-ambiente-React-Native-no-WSL2-5236fb970e6a459dbd05fa609b146481" target="_blank">React Native - WSL2</a>
+> <a href="https://www.notion.so/Configurando-ambiente-React-Native-no-WSL2-ea5761716caa421fac2883d49cb53f4c" target="_blank">React Native - WSL2</a>
 
 ## Desenvolvedores/Contribuintes :octocat:
 
