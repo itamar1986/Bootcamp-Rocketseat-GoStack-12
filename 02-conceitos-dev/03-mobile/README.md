@@ -18,6 +18,8 @@
 
 :small_blue_diamond: [Imagem da arquitetura](#imagem-da-arquitetura)
 
+:small_blue_diamond: [Documentação](#documentação)
+
 ## Descrição do projeto 
 
 <p align="justify">
@@ -76,6 +78,16 @@ Modelo da arquitetura usada no projeto.
 
 ![03-mobile](https://user-images.githubusercontent.com/54650669/108788510-e97f3f80-7556-11eb-954b-6861132ef49a.png)
 </p>
+
+## Documentação
+
+> <a href="https://react-native.rocketseat.dev/" target="_blank">React Native</a>
+
+> <a href="https://react-native.rocketseat.dev/android/linux" target="_blank">React Native - android / linux</a>
+
+> <a href="https://medium.com/nerdzao/configurando-react-native-com-android-studio-no-ubuntu-18-04-e305f386f4b7" target="_blank">React Native - android / ubuntu</a>
+
+> <a href="https://www.notion.so/03-Configurando-ambiente-React-Native-no-WSL2-5236fb970e6a459dbd05fa609b146481" target="_blank">React Native - WSL2</a>
 
 ## Desenvolvedores/Contribuintes :octocat:
 
