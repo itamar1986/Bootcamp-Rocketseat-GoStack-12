@@ -16,6 +16,8 @@
 
 :small_blue_diamond: [Dependências](#dependências)
 
+:small_blue_diamond: [Documentação](#documentação)
+
 ## Descrição do projeto
 
 <p align="justify">
@@ -77,6 +79,12 @@ Será necessário configurar a estrutura, principalmente o ESLint, Prettier e Ed
 :boom: ctrl espaço => passa um Timestamp na data do insomnia
 
 :boom: yarn add date-fns
+
+## Documentação
+
+> <a href="https://www.notion.so/002-Padr-es-de-projeto-com-ESLint-Prettier-e-EditorConfig-e0ddd9b933414524b207fa4efcdd7b27" target="_blank">Padrões de projeto com ESLint, Prettier e EditorConfig</a>
+
+> <a href="https://www.notion.so/0010-Repository-service-e-patterns-1b80d4f15d324e60842e1b6a51434053" target="_blank">Repository, service e patterns</a>
 
 ## Desenvolvedores/Contribuintes :octocat:
 
