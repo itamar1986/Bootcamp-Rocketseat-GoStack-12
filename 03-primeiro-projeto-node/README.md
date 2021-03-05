@@ -82,9 +82,9 @@ Será necessário configurar a estrutura, principalmente o ESLint, Prettier e Ed
 
 ## Documentação
 
-> <a href="https://www.notion.so/002-Padr-es-de-projeto-com-ESLint-Prettier-e-EditorConfig-e0ddd9b933414524b207fa4efcdd7b27" target="_blank">Padrões de projeto com ESLint, Prettier e EditorConfig</a>
+> <a href="https://www.notion.so/Padr-es-de-projeto-com-ESLint-Prettier-e-EditorConfig-0b57b47a24724c859c0cf226aa0cc3a7" target="_blank">Padrões de projeto com ESLint, Prettier e EditorConfig</a>
 
-> <a href="https://www.notion.so/0010-Repository-service-e-patterns-1b80d4f15d324e60842e1b6a51434053" target="_blank">Repository, service e patterns</a>
+> <a href="https://www.notion.so/Repository-service-e-patterns-82419cceb11c4c4fbbc055ade7fb1ac5" target="_blank">Repository, service e patterns</a>
 
 ## Desenvolvedores/Contribuintes :octocat:
 
