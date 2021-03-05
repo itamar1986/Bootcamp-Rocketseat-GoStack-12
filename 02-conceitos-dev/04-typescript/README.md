@@ -18,6 +18,8 @@
 
 :small_blue_diamond: [Vídeo do projeto](#vídeo-do-projeto)
 
+:small_blue_diamond: [Documentação](#documentação)
+
 ## Descrição do projeto 
 
 <p align="justify">
@@ -70,6 +72,10 @@ No terminal dentro da pasta do projeto, executa a linha de comando: node src/ind
 
 ![04-typescript](https://user-images.githubusercontent.com/54650669/109852970-24a70000-7c34-11eb-918c-46e190b102b2.gif)
 </p>
+
+## Documentação
+
+> <a href="https://www.notion.so/05-Guia-Typescript-71be7ea1933d40dcb51448368ac58a32" target="_blank">Guia Typescript</a>
 
 ## Desenvolvedores/Contribuintes :octocat:
 
