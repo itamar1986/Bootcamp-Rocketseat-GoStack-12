@@ -98,9 +98,9 @@
 
 :boom: http://localhost:3333 -> Endereço do servidor
 
-yarn add cors
+:boom: yarn add cors
 
-yarn add @types/cors -D
+:boom: yarn add @types/cors -D
 
 ## Regras da aplicação
 
