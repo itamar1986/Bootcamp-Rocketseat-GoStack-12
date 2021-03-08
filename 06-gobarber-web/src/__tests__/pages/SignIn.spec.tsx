@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, fireEvent, wait } from '@testing-library/react';
+
 import SignIn from '../../pages/SignIn';
 
 const mockedHistoryPush = jest.fn();
@@ -18,7 +19,7 @@ jest.mock('react-router-dom', () => {
 jest.mock('../../hooks/auth', () => {
   return {
     useAuth: () => ({
-      SignIn: mockedSignIn,
+      signIn: mockedSignIn,
     }),
   };
 });
@@ -43,7 +44,7 @@ describe('SignIn Page', () => {
     const passwordField = getByPlaceholderText('Senha');
     const buttonElement = getByText('Entrar');
 
-    fireEvent.change(emailField, { target: { value: 'itamar@exemple.com' } });
+    fireEvent.change(emailField, { target: { value: 'johndoe@example.com' } });
     fireEvent.change(passwordField, { target: { value: '123456' } });
 
     fireEvent.click(buttonElement);
@@ -81,7 +82,7 @@ describe('SignIn Page', () => {
     const passwordField = getByPlaceholderText('Senha');
     const buttonElement = getByText('Entrar');
 
-    fireEvent.change(emailField, { target: { value: 'itamar@exemple.com' } });
+    fireEvent.change(emailField, { target: { value: 'johndoe@example.com' } });
     fireEvent.change(passwordField, { target: { value: '123456' } });
 
     fireEvent.click(buttonElement);

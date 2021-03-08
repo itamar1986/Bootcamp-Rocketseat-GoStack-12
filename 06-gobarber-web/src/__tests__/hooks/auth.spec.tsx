@@ -11,8 +11,8 @@ describe('Auth hook', () => {
     const apiResponse = {
       user: {
         id: 'user-123',
-        name: 'Itamar Minnow',
-        email: 'itamar@exemple.com.br',
+        name: 'John Doe',
+        email: 'johndoe@example.com.br',
       },
       token: 'token-123',
     };
@@ -26,7 +26,7 @@ describe('Auth hook', () => {
     });
 
     result.current.signIn({
-      email: 'itamar@exemple.com.br',
+      email: 'johndoe@example.com.br',
       password: '123456',
     });
 
@@ -41,7 +41,7 @@ describe('Auth hook', () => {
       JSON.stringify(apiResponse.user),
     );
 
-    expect(result.current.user.email).toEqual('itamar@exemple.com.br');
+    expect(result.current.user.email).toEqual('johndoe@example.com.br');
   });
 
   it('should restore saved data from storage when auth inits', () => {
@@ -52,8 +52,8 @@ describe('Auth hook', () => {
         case '@GoBarber:user':
           return JSON.stringify({
             id: 'user-123',
-            name: 'Itamar Minnow',
-            email: 'itamar@exemple.com.br',
+            name: 'John Doe',
+            email: 'johndoe@example.com.br',
           });
         default:
           return null;
@@ -64,7 +64,7 @@ describe('Auth hook', () => {
       wrapper: AuthProvider,
     });
 
-    expect(result.current.user.email).toEqual('itamar@exemple.com.br');
+    expect(result.current.user.email).toEqual('johndoe@example.com.br');
   });
 
   it('should be able to sign out', async () => {
@@ -75,8 +75,8 @@ describe('Auth hook', () => {
         case '@GoBarber:user':
           return JSON.stringify({
             id: 'user-123',
-            name: 'Itamar Minnow',
-            email: 'itamar@exemple.com.br',
+            name: 'John Doe',
+            email: 'johndoe@example.com.br',
           });
         default:
           return null;
@@ -106,8 +106,8 @@ describe('Auth hook', () => {
 
     const user = {
       id: 'user-123',
-      name: 'Itamar Minnow',
-      email: 'itamar@exemple.com.br',
+      name: 'John Doe',
+      email: 'johndoe@example.com.br',
       avatar_url: 'image-test.jpg',
     };
 
