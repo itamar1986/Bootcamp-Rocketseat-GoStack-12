@@ -1,7 +1,8 @@
 import styled from 'styled-components/native';
-import { FlatList } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { RectButton } from 'react-native-gesture-handler';
+import { FlatList } from 'react-native';
+
 import { Provider } from './index';
 
 interface ProviderContainerProps {
@@ -27,9 +28,8 @@ export const Container = styled.View`
 
 export const Header = styled.View`
   padding: 24px;
-  padding-top: ${getStatusBarHeight(true) + 24}px;
-  background: #28262e;
-
+  padding-top: ${getStatusBarHeight() + 24}px;
+  background: ${({ theme }) => theme.colors.blackMedium};
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -38,10 +38,10 @@ export const Header = styled.View`
 export const BackButton = styled.TouchableOpacity``;
 
 export const HeaderTitle = styled.Text`
-  color: #f5ede8;
-  font-family: 'RobotoSlab-Medium';
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.fonts.medium};
   font-size: 20px;
-  margin-left: 26px;
+  margin-left: 16px;
 `;
 
 export const UserAvatar = styled.Image`
@@ -62,10 +62,11 @@ export const ProvidersList = styled(FlatList as new () => FlatList<Provider>)`
 `;
 
 export const ProviderContainer = styled(RectButton)<ProviderContainerProps>`
-  background: ${props => (props.selected ? '#ff9000' : '#3e3b47')};
+  background: ${({ theme, selected }) =>
+    selected ? theme.colors.orange : theme.colors.shape};
   flex-direction: row;
   align-items: center;
-  padding: 8px 12px;
+  padding: 8px 16px;
   margin-right: 16px;
   border-radius: 10px;
 `;
@@ -78,23 +79,24 @@ export const ProviderAvatar = styled.Image`
 
 export const ProviderName = styled.Text<ProviderNameProps>`
   margin-left: 8px;
-  font-family: 'RobotoSlab-Medium';
+  font-family: ${({ theme }) => theme.fonts.medium};
   font-size: 16px;
-  color: ${props => (props.selected ? '#232129' : '#f4ede8')};
+  color: ${({ theme, selected }) =>
+    selected ? theme.colors.inputs : theme.colors.white};
 `;
 
 export const Calendar = styled.View``;
 
 export const Title = styled.Text`
-  font-family: 'RobotoSlab-Medium';
-  color: #f4ede8;
+  font-family: ${({ theme }) => theme.fonts.medium};
+  color: ${({ theme }) => theme.colors.white};
   font-size: 24px;
   margin: 0 24px 24px;
 `;
 
 export const OpenDatePickerButton = styled(RectButton)`
-  height: 46px;
-  background: #ff9000;
+  height: 48px;
+  background: ${({ theme }) => theme.colors.orange};
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -102,9 +104,9 @@ export const OpenDatePickerButton = styled(RectButton)`
 `;
 
 export const OpenDatePickerButtonText = styled.Text`
-  font-family: 'RobotoSlab-Medium';
+  font-family: ${({ theme }) => theme.fonts.medium};
   font-size: 16px;
-  color: #232129;
+  color: ${({ theme }) => theme.colors.inputs};
 `;
 
 export const Schedule = styled.View`
@@ -117,8 +119,8 @@ export const Section = styled.View`
 
 export const SectionTitle = styled.Text`
   font-size: 18px;
-  color: #999591;
-  font-family: 'RobotoSlab-Regular';
+  color: ${({ theme }) => theme.colors.gray};
+  font-family: ${({ theme }) => theme.fonts.regular};
   margin: 0 24px 12px;
 `;
 
@@ -130,22 +132,23 @@ export const SectionContent = styled.ScrollView.attrs({
 
 export const Hour = styled(RectButton)<HourProps>`
   padding: 12px;
-  background: ${props => (props.selected ? '#ff9000' : '#3e3b47')};
+  background: ${({ theme, selected }) =>
+    selected ? theme.colors.orange : theme.colors.shape};
   border-radius: 10px;
   margin-right: 8px;
-
-  opacity: ${props => (props.available ? 1 : 0.3)};
+  opacity: ${({ available }) => (available ? 1 : 0.3)};
 `;
 
 export const HourText = styled.Text<HourTextProps>`
-  color: ${props => (props.selected ? '#232129' : '#f4ede8')};
-  font-family: 'RobotoSlab-Regular';
+  color: ${({ theme, selected }) =>
+    selected ? theme.colors.inputs : theme.colors.white};
+  font-family: ${({ theme }) => theme.fonts.regular};
   font-size: 16px;
 `;
 
 export const CreateAppointmentButton = styled(RectButton)`
   height: 50px;
-  background: #ff9000;
+  background: ${({ theme }) => theme.colors.orange};
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -153,7 +156,7 @@ export const CreateAppointmentButton = styled(RectButton)`
 `;
 
 export const CreateAppointmentButtonText = styled.Text`
-  font-family: 'RobotoSlab-Medium';
+  font-family: ${({ theme }) => theme.fonts.medium};
   font-size: 18px;
-  color: #232129;
+  color: ${({ theme }) => theme.colors.inputs};
 `;

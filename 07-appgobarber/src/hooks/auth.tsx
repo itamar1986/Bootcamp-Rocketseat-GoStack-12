@@ -5,7 +5,9 @@ import React, {
   useContext,
   useEffect,
 } from 'react';
+
 import AsyncStorage from '@react-native-community/async-storage';
+
 import api from '../services/api';
 
 interface User {
@@ -29,8 +31,8 @@ interface AuthContextData {
   user: User;
   loading: boolean;
   signIn(credentials: SignInCredentials): Promise<void>;
-  signOut(): void;
   updateUser(user: User): Promise<void>;
+  signOut(): void;
 }
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
@@ -40,7 +42,7 @@ const AuthProvider: React.FC = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function loadStoragedData(): Promise<void> {
+    async function loadStorageData(): Promise<void> {
       const [token, user] = await AsyncStorage.multiGet([
         '@GoBarber:token',
         '@GoBarber:user',
@@ -55,16 +57,13 @@ const AuthProvider: React.FC = ({ children }) => {
       setLoading(false);
     }
 
-    loadStoragedData();
+    loadStorageData();
   }, []);
 
   const signIn = useCallback(async ({ email, password }) => {
-    const response = await api.post('sessions', {
-      email,
-      password,
-    });
+    const reseponse = await api.post('sessions', { email, password });
 
-    const { token, user } = response.data;
+    const { token, user } = reseponse.data;
 
     await AsyncStorage.multiSet([
       ['@GoBarber:token', token],
@@ -77,7 +76,7 @@ const AuthProvider: React.FC = ({ children }) => {
   }, []);
 
   const signOut = useCallback(async () => {
-    await AsyncStorage.multiRemove(['@GoBarber:token', '@GoBarber:user']);
+    await AsyncStorage.multiRemove(['@GoBarber:user', '@GoBarber:token']);
 
     setData({} as AuthState);
   }, []);
@@ -107,7 +106,7 @@ function useAuth(): AuthContextData {
   const context = useContext(AuthContext);
 
   if (!context) {
-    throw new Error('useAuth mush be used within an AuthProvider');
+    throw new Error('useAuth must be used within an AuthProvider');
   }
 
   return context;

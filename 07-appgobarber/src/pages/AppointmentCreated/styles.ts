@@ -10,21 +10,21 @@ export const Container = styled.View`
 
 export const Title = styled.Text`
   font-size: 32px;
-  color: #f4ede8;
-  font-family: 'RobotoSlab-Medium';
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.fonts.medium};
   margin-top: 48px;
   text-align: center;
 `;
 
 export const Description = styled.Text`
-  font-family: 'RobotoSlab-Regular';
+  font-family: ${({ theme }) => theme.fonts.regular};
   font-size: 18px;
-  color: #999591;
+  color: ${({ theme }) => theme.colors.gray};
   margin-top: 16px;
 `;
 
 export const OkButton = styled(RectButton)`
-  background: #ff9000;
+  background: ${({ theme }) => theme.colors.orange};
   justify-content: center;
   align-items: center;
   border-radius: 10px;
@@ -33,7 +33,7 @@ export const OkButton = styled(RectButton)`
 `;
 
 export const OkButtonText = styled.Text`
-  font-family: 'RobotoSlab-Medium';
-  color: #312e38;
+  font-family: ${({ theme }) => theme.fonts.medium};
+  color: ${({ theme }) => theme.colors.background};
   font-size: 18px;
 `;

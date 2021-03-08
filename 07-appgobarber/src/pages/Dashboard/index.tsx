@@ -1,8 +1,8 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React, { useCallback, useEffect, useState } from 'react';
-
-import Icon from 'react-native-vector-icons/Feather';
 import { useNavigation } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/Feather';
+
+import { useTheme } from 'styled-components';
 import { useAuth } from '../../hooks/auth';
 import api from '../../services/api';
 
@@ -34,9 +34,10 @@ const Dashboard: React.FC = () => {
 
   const { user } = useAuth();
   const { navigate } = useNavigation();
+  const theme = useTheme();
 
   useEffect(() => {
-    api.get('providers').then(response => {
+    api.get('/providers').then(response => {
       setProviders(response.data);
     });
   }, []);
@@ -56,7 +57,8 @@ const Dashboard: React.FC = () => {
     <Container>
       <Header>
         <HeaderTitle>
-          Bem vindo, {'\n'}
+          Bem vindo,
+          {'\n'}
           <UserName>{user.name}</UserName>
         </HeaderTitle>
 
@@ -75,18 +77,24 @@ const Dashboard: React.FC = () => {
           <ProviderContainer
             onPress={() => navigateToCreateAppointment(provider.id)}
           >
-            <ProviderAvatar source={{ uri: provider.avatar_url }} />
+            <ProviderAvatar
+              source={{
+                uri:
+                  provider.avatar_url ||
+                  'https://api.adorable.io/avatars/72/abott@adorable.png',
+              }}
+            />
 
             <ProviderInfo>
               <ProviderName>{provider.name}</ProviderName>
 
               <ProviderMeta>
-                <Icon name="calendar" size={14} color="#ff9000" />
+                <Icon name="calendar" size={14} color={theme.colors.orange} />
                 <ProviderMetaText>Segunda à sexta</ProviderMetaText>
               </ProviderMeta>
 
               <ProviderMeta>
-                <Icon name="clock" size={14} color="#ff9000" />
+                <Icon name="clock" size={14} color={theme.colors.orange} />
                 <ProviderMetaText>8h às 18h</ProviderMetaText>
               </ProviderMeta>
             </ProviderInfo>

@@ -1,5 +1,5 @@
 **/*.js
 node_modules
 build
-
-/*.js
+android
+ios
