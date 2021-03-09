@@ -9,11 +9,17 @@
 
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
+:small_blue_diamond: [Finalizando front-end web do app](#finalizando-front-end-web-do-app)
+
 :small_blue_diamond: [Tecnologias](#tecnologias)
 
 :small_blue_diamond: [Instalações e Dependências](#instalações-e-dependências)
 
+:small_blue_diamond: [Instalações e Dependências 2ª parte](#instalações-e-dependências-2ª-parte)
+
 :small_blue_diamond: [Vídeo do projeto](#vídeo-do-projeto)
+
+:small_blue_diamond: [Vídeo do projeto 2ª parte](#vídeo-do-projeto-2ª-parte)
 
 :small_blue_diamond: [Documentação](#documentação)
 
@@ -113,6 +119,35 @@ Fazendo testes de logon de e-mail e senha errada, antes de colocar a requisiçã
 ## Documentação
 
 > <a href="https://www.notion.so/React-Hooks-e-Context-API-c2effc37567442adbfa36bbc4cd94d9c" target="_blank">React Hooks e Context API</a>
+
+## <h1>Finalizando front-end web do app</h1>
+
+<p align="justify">
+  Nessa etapa continuaremos o desenvolvimento do front-end web da aplicação GoBarber criando as telas e funções que os prestadores de serviço utilizarão para consultar sua agenda e disponibilidade. Será necessário ajustar a API, utilizar o Query Params, verificar os agendamentos no mesmo horário, verificar os dias indisponíveis no mês, trazer mais informações necessárias dos clientes dos agendamentos e implementar a serialização no cache.
+  Em recuperação de senha, temos a criação da página de recuperação, o envio de formulário a API, criação e implementação da página de redefinição.
+  No Dashboard temos a criação do Header, listagem do próximo agendamento, adicionar o componente de calendário e estilizações, fazendo novas chamadas à API para a disponibilidade do mês, tratar os agendamentos da API e a exibição dos agendamentos em tela.
+  No perfil do usuário, temos a página de perfil, a troca de avatar e alteração dos dados.
+</p>
+
+## Instalações e Dependências 2ª parte
+
+:boom: yarn add react-day-picker
+
+:boom: yarn add date-fns
+
+## Vídeo do projeto 2ª parte
+
+<p align="justify">
+Vídeo com a tela de criar conta, cadastrando o Nome, E-mail e senha. Na tela abaixo tem o software DBeaver com a criação dos dados na tabela.
+</p>
+
+![06-gobarber-web6](https://user-images.githubusercontent.com/54650669/110554065-dd7bac00-8118-11eb-96ef-2b0670ac9aa2.gif)
+
+<p align="justify">
+Vídeo com a tela do logon, sendo direcionada para troca de avatar e logo após interagindo com o calendário disponível.
+</p>
+
+![06-gobarber-web7](https://user-images.githubusercontent.com/54650669/110554159-fdab6b00-8118-11eb-8c53-aa757175d7f7.gif)
 
 ## Desenvolvedores/Contribuintes :octocat:
 
