@@ -10,9 +10,13 @@
 
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
+:small_blue_diamond: [Arquitetura, testes e Finalização](#arquitetura-testes-e-finalização)
+
 :small_blue_diamond: [Tecnologias](#tecnologias)
 
 :small_blue_diamond: [Instalações e Dependências](#instalações-e-dependências)
+
+:small_blue_diamond: [Instalações e Dependências 2ª parte](#instalações-e-dependências-2ª-parte)
 
 :small_blue_diamond: [Regras da aplicação](#regras-da-aplicação)
 
@@ -20,7 +24,11 @@
 
 :small_blue_diamond: [Vídeo do projeto](#vídeo-do-projeto)
 
+:small_blue_diamond: [Vídeo do projeto 2ª parte](#vídeo-do-projeto-2ª-parte)
+
 :small_blue_diamond: [Documentação](#documentação)
+
+:small_blue_diamond: [Documentação 2ª parte](#documentação-2ª-parte)
 
 ## Descrição do projeto
 
@@ -194,6 +202,104 @@ No terminal dentro da pasta do projeto, executa a linha de comando yarn dev:serv
 > <a href="http://www.md5.cz/" target="_blank">MD5</a>
 
 > <a href="https://jwt.io/" target="_blank">JWT</a>
+
+<h1>Arquitetura, testes no Node.js e Finalizando back-end do app</h1>
+
+## Arquitetura, testes e Finalização
+
+<p align="justify">
+  Nessa etapa, continuaremos o projeto iniciado anteriormente adicionando pontos cruciais de arquitetura, design patterns e testes automatizados. Em arquitetura e DDD, temos os conceitos de DDD (Domain Driven Design) e TDD (Test-Driven Development), a separação em módulos, a camada de Infra, a configuração de Imports, reescrevendo Repositórios, refatorando módulo de usuários, a injeção de dependências, adicionando os controllers, a configuração do Jest, pensar em como devem ser implementados os testes, criando o primeiro teste, configurar o coverage report no Jest, testes de agendamento, testando a criação de usuário, testando a autenticação, configuração do provider de storage e atualização de Avatar.
+
+  Para finalizar a aplicação, temos os conceitos mais complexos do back-end da aplicação como relacionamentos complexos, trabalhos em segundo plano, cache, bancos de dados não-relacionais e segurança. Nas estrutura e Ajustes, temos o mapeamento do features do sistema, o perfil do usuário, a recuperação de senha, o reset de senha, o salvamento dos tokens no banco, o template de email, o template engine, a refatoração dos testes, atualização do perfil, rota e controller de perfil.
+
+  No agendamento, temos a listagem de prestadores, filtrando agendamentos por mês, listando dias disponíveis, listando horários disponíveis, excluindo horários antigos, criação do agendamento, regras do agendamento, rotas e controllers.
+
+  Para finalizar o back-end incluindo as últimas funcionalidades do app e também conceitos como MongoDB, variáveis ambiente, validação, cache e segurança. Para o prestador de serviços, temos a agenda do prestador, a configuração MongoDB, as estruturas de notificações e enviando notificações. Em personalizando para produção, temos a validação dos dados, as variáveis de ambiente, a utilização da Class Transformer, a organização do container, a configuração do cache, o cache lista de providers, invalidando cache e o cache de agendamentos.
+</p>
+
+## Instalações e Dependências 2ª parte
+
+:boom: yarn add tsconfig-paths -D
+
+:boom: yarn add tsyringe
+
+:boom: yarn add jest -D
+
+:boom: yarn jest --init
+
+:boom: yarn add ts-jest -D
+
+:boom: yarn add @types/jest -D
+
+:boom: yarn test
+
+:boom: yarn test -> caminho do arquivo .spec.ts
+
+:boom: yarn typeorm migration:create -n CreateUserTokens
+
+:boom: yarn typeorm migration:create -n AddUserIdToAppointments
+
+:boom: yarn typeorm migration:run
+
+:boom: yarn add nodemailer
+
+:boom: yarn add @types/nodemailer -D
+
+:boom: yarn add handlebars
+
+:boom: yarn jest --clearCache
+
+:boom: sudo docker run --name mongodb -p 27017:27017 -d -t mongo
+
+:boom: sudo docker start mongodb
+
+:boom: http://localhost:27017 -> Endereço do servidor mongo
+
+:boom: yarn add mongodb
+
+:boom: yarn add @types/mongodb -D
+
+:boom: yarn add celebrate
+
+:boom: yarn add @types/hapi__joi
+
+:boom: yarn add dotenv
+
+:boom: git rm --cached ormconfig.json
+
+:boom: yarn add class-transformer
+
+:boom: yarn add aws-sdk
+
+:boom: yarn add mime
+
+:boom: sudo docker run --name redis -p 6379:6379 -d -t redis:alpine
+
+:boom: sudo docker start redis
+
+:boom: yarn add ioredis
+
+:boom: yarn add @types/ioredis -D
+
+:boom: yarn add rate-limiter-flexible
+
+:boom: yarn add redis
+
+:boom: yarn add @types/redis
+
+## Vídeo do projeto 2ª parte
+
+<p align="justify">
+No terminal dentro da pasta do projeto, executa a linha de comando yarn test.
+</p>
+
+![04-iniciando-back-end4](https://user-images.githubusercontent.com/54650669/110403374-c2973200-805b-11eb-8cac-902973d0ca6e.gif)
+
+## Documentação 2ª parte
+
+> <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank">Material Icon Theme</a>
+
+> <a href="https://www.mongodb.com/try/download/compass" target="_blank">MongoDB</a>
 
 ## Desenvolvedores/Contribuintes :octocat:
 
