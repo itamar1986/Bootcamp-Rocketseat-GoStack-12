@@ -18,6 +18,8 @@
 
 :small_blue_diamond: [Instalações e Dependências 2ª parte](#instalações-e-dependências-2ª-parte)
 
+:small_blue_diamond: [Vídeo do projeto](#vídeo-do-projeto)
+
 :small_blue_diamond: [Documentação](#documentação)
 
 :small_blue_diamond: [Documentação 2ª parte](#documentação-2ª-parte)
@@ -97,6 +99,16 @@ Em conectando com a API, temos o cadastro na aplicação, a autenticação de us
 > <a href="https://fonts.google.com/specimen/Roboto+Slab?preview.text_type=custom" target="_blank">Google Fonts</a>
 
 > <a href="https://stackoverflow.com/questions/51026532/json-server-cannot-access-via-local-ip" target="_blank">Json-server cannot access via local IP</a>
+
+## Vídeo do projeto
+
+<p align="justify">
+
+</p>
+
+https://user-images.githubusercontent.com/54650669/110560578-fd18d180-8124-11eb-81f1-e3ac59138776.mp4
+
+https://user-images.githubusercontent.com/54650669/110560655-1faaea80-8125-11eb-9ac6-19ac3e3916d7.mp4
 
 ## <h1>Finalizando front-end mobile do app</h1>
 
