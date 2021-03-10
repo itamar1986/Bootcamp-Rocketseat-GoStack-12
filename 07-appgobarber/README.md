@@ -106,9 +106,11 @@ Em conectando com a API, temos o cadastro na aplicação, a autenticação de us
 
 </p>
 
-https://user-images.githubusercontent.com/54650669/110560578-fd18d180-8124-11eb-81f1-e3ac59138776.mp4
+![07-appgobarber1](https://user-images.githubusercontent.com/54650669/110561988-6dc0ed80-8127-11eb-88d1-1a634341e839.gif)
 
-https://user-images.githubusercontent.com/54650669/110560655-1faaea80-8125-11eb-9ac6-19ac3e3916d7.mp4
+![07-appgobarber2](https://user-images.githubusercontent.com/54650669/110562079-a06ae600-8127-11eb-9808-da7309171cf8.gif)
+
+![07-appgobarber3](https://user-images.githubusercontent.com/54650669/110562186-c98b7680-8127-11eb-85af-69b9bcdd1e7e.gif)
 
 ## <h1>Finalizando front-end mobile do app</h1>
 
