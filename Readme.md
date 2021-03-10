@@ -8,7 +8,28 @@
 
 > Status do Projeto: :heavy_check_mark: (concluido)
 
-<p align="justify">
-</p>
-
 ![GoStack](https://user-images.githubusercontent.com/54650669/110630230-dfc72000-8183-11eb-9808-b758d181d6a6.png)
+
+## Ambiente de Desenvolvimento
+
+:construction: Instalação do Node
+
+:construction: Instalação do Yarn
+
+:construction: Instalação do Configurações do Git:
+- git clone https:
+- git add .
+- git commit -a -m 'Comentario'
+- git push
+
+> <a href="https://www.notion.so/Visual-Studio-Code-e0d3c48eebdd4df586c4ba8c12cf5a7a" target="_blank">Visual Studio Code</a>
+
+> <a href="https://www.notion.so/Ubuntu-20-04-a61bc0eaa4764dec88e55b1f871abbe1" target="_blank">Instalação e configuração do Ubuntu 20.04</a>
+
+> <a href="http://docente.ifsc.edu.br/mello/livros/editor-VI-tutoriais/vim-ref.html" target="_blank">Guia de Referência - Ubuntu</a>
+
+
+
+
+
+Insomnia
