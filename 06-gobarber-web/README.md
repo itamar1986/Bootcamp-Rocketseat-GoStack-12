@@ -9,19 +9,17 @@
 
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
-:small_blue_diamond: [Finalizando front-end web do app](#finalizando-front-end-web-do-app)
-
 :small_blue_diamond: [Tecnologias](#tecnologias)
 
 :small_blue_diamond: [Instalações e Dependências](#instalações-e-dependências)
-
-:small_blue_diamond: [Instalações e Dependências 2ª parte](#instalações-e-dependências-2ª-parte)
 
 :small_blue_diamond: [Vídeo do projeto](#vídeo-do-projeto)
 
 :small_blue_diamond: [Vídeo do projeto 2ª parte](#vídeo-do-projeto-2ª-parte)
 
 :small_blue_diamond: [Documentação](#documentação)
+
+:small_blue_diamond: [Finalizando front-end web do app e Testes no ReactJS](#finalizando-front-end-web-do-app-e-testes-no-reactjs)
 
 ## Descrição do projeto
 
@@ -84,6 +82,21 @@ Nas rotas da aplicação vamos configurar o pacote react-router-dom, autenticar 
 
 :boom: yarn add @types/react-router-dom -D
 
+:boom: yarn add react-day-picker
+
+:boom: yarn add date-fns
+
+:boom: yarn test
+
+:boom: yarn test --coverage --watchAll false
+
+:boom: yarn test:coverage
+
+:boom: yarn add @testing-library/react-hooks -D
+
+:boom: yarn add react-test-renderer -D
+
+:boom: yarn add axios-mock-adapter -D
 ## Vídeo do projeto
 
 <p align="justify">
@@ -120,20 +133,16 @@ Fazendo testes de logon de e-mail e senha errada, antes de colocar a requisiçã
 
 > <a href="https://www.notion.so/React-Hooks-e-Context-API-c2effc37567442adbfa36bbc4cd94d9c" target="_blank">React Hooks e Context API</a>
 
-## <h1>Finalizando front-end web do app</h1>
+## <h1>Finalizando front-end web do app e Testes no ReactJS</h1>
 
 <p align="justify">
   Nessa etapa continuaremos o desenvolvimento do front-end web da aplicação GoBarber criando as telas e funções que os prestadores de serviço utilizarão para consultar sua agenda e disponibilidade. Será necessário ajustar a API, utilizar o Query Params, verificar os agendamentos no mesmo horário, verificar os dias indisponíveis no mês, trazer mais informações necessárias dos clientes dos agendamentos e implementar a serialização no cache.
   Em recuperação de senha, temos a criação da página de recuperação, o envio de formulário a API, criação e implementação da página de redefinição.
   No Dashboard temos a criação do Header, listagem do próximo agendamento, adicionar o componente de calendário e estilizações, fazendo novas chamadas à API para a disponibilidade do mês, tratar os agendamentos da API e a exibição dos agendamentos em tela.
   No perfil do usuário, temos a página de perfil, a troca de avatar e alteração dos dados.
+
+  Referente aos Testes no ReactJS, será conhecida as principais ferramentas do ecossistema do React para testar nossas aplicações a fim de garantir que o usuário tenha a mesma experiência com a parte visual da aplicação independente de quantas funcionalidades sejam adicionadas. Em Ambiente de testes, temos a configuração ambiente do Jest, criação do primeiro teste e a geração do coverage report. Em testando autenticação, vamos criar o teste de login, o mock do hook de autenticação e o teste de componente de input. Em Testando hooks, iniciamos os testes dos hooks, a criação do mock da API,
 </p>
-
-## Instalações e Dependências 2ª parte
-
-:boom: yarn add react-day-picker
-
-:boom: yarn add date-fns
 
 ## Vídeo do projeto 2ª parte
 
