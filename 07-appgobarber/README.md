@@ -122,7 +122,8 @@ Em conectando com a API, temos o cadastro na aplicação, a autenticação de us
 ## Vídeo do projeto
 
 <p align="justify">
-  - No terminal dentro da pasta do projeto do servidor back-end, executa o docker e yarn dev:server;
+
+  - No terminal dentro da pasta do projeto do servidor back-end, executa o docker e yarn dev:server.
 
   - Faz a Requisição no Insomnia.
 
@@ -134,6 +135,7 @@ Em conectando com a API, temos o cadastro na aplicação, a autenticação de us
 ![07-appgobarber1](https://user-images.githubusercontent.com/54650669/110564125-1d4b8f00-812b-11eb-8d12-204dfa248c24.gif)
 
 <p align="justify">
+
   - Vídeo da tela mobile com a tela de cadastro, tela de login e agendamento de dia e horário.
 </p>
 
