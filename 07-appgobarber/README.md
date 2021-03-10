@@ -10,11 +10,17 @@
 
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
+:small_blue_diamond: [Finalizando front-end mobile do app](#finalizando-front-end-mobile-do-app)
+
 :small_blue_diamond: [Tecnologias](#tecnologias)
 
 :small_blue_diamond: [Instalações e Dependências](#instalações-e-dependências)
 
+:small_blue_diamond: [Instalações e Dependências 2ª parte](#instalações-e-dependências-2ª-parte)
+
 :small_blue_diamond: [Documentação](#documentação)
+
+:small_blue_diamond: [Documentação 2ª parte](#documentação-2ª-parte)
 
 ## Descrição do projeto
 
@@ -91,6 +97,29 @@ Em conectando com a API, temos o cadastro na aplicação, a autenticação de us
 > <a href="https://fonts.google.com/specimen/Roboto+Slab?preview.text_type=custom" target="_blank">Google Fonts</a>
 
 > <a href="https://stackoverflow.com/questions/51026532/json-server-cannot-access-via-local-ip" target="_blank">Json-server cannot access via local IP</a>
+
+## <h1>Finalizando front-end mobile do app</h1>
+
+<p align="justify">
+  Finalizando o aplicativo mobile com React Native do GoBarber que será utilizado pelos clientes para agendar serviços com os prestadores. Vamos iniciar pelo ajustes na API, listando os providers com serialização, colocando endereço das imagens, criação das páginas e rotas. No Dashboard, temos o Header do Dashboard, a busca de providers da API e a listagem de prestadores. No agendamento, temos a criação da estrutura, a alternação entre providers, a criação do Picker de data, a busca da disponibilidade da API, a debugação do app com Flipper, a disponibilidade por período, mostrando horários em tela e criação do agendamento. Na página de sucesso, temos a criação da estrutura da tela e a formatação da data. No perfil, temos a criação da tela de perfil e a atualização dos dados.
+</p>
+
+## Instalações e Dependências 2ª parte
+
+:boom: ip addr
+
+:boom: yarn add @react-native-community/datetimepicker
+
+:boom: yarn add date-fns
+
+:boom: cd ~/Flipper-linux
+- ./flipper
+
+## Documentação 2ª parte
+
+> <a href="https://fbflipper.com/" target="_blank">Flipper</a>
+
+> <a href="https://www.notion.so/Configurando-o-Image-Picker-para-o-Android-d1a4ec6ca7c34ad59e7a68ec0d2b2e19" target="_blank">Configurando o Image Picker para o Android</a>
 
 ## Desenvolvedores/Contribuintes :octocat:
 
