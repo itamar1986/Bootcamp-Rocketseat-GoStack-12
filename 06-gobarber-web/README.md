@@ -15,11 +15,11 @@
 
 :small_blue_diamond: [Vídeo do projeto](#vídeo-do-projeto)
 
-:small_blue_diamond: [Vídeo do projeto 2ª parte](#vídeo-do-projeto-2ª-parte)
-
 :small_blue_diamond: [Documentação](#documentação)
 
 :small_blue_diamond: [Finalizando front-end web do app e Testes no ReactJS](#finalizando-front-end-web-do-app-e-testes-no-reactjs)
+
+:small_blue_diamond: [Vídeo do projeto 2ª parte](#vídeo-do-projeto-2ª-parte)
 
 ## Descrição do projeto
 
