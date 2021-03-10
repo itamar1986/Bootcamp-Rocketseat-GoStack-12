@@ -16,7 +16,9 @@
 
 :construction: Instalação do Yarn
 
-:construction: Instalação do Configurações do Git:
+:construction: Instalação do Insomnia
+
+:construction: Configurações do Git:
 - git clone https:
 - git add .
 - git commit -a -m 'Comentario'
@@ -28,8 +30,8 @@
 
 > <a href="http://docente.ifsc.edu.br/mello/livros/editor-VI-tutoriais/vim-ref.html" target="_blank">Guia de Referência - Ubuntu</a>
 
+> <a href="https://sempreupdate.com.br/como-instalar-o-beekeeper-studio-no-ubuntu-linux-mint-fedora-debian-centos-e-opensuse/" target="_blank">Beekeeper Studio no Ubuntu - Editor de Banco</a>
+
+> <a href="https://github.com/rocketseat-education" target="_blank">Rocketseat Education</a>
 
 
-
-
-Insomnia
