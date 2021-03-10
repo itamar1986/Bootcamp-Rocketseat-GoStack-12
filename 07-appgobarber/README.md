@@ -10,19 +10,15 @@
 
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
-:small_blue_diamond: [Finalizando front-end mobile do app](#finalizando-front-end-mobile-do-app)
-
 :small_blue_diamond: [Tecnologias](#tecnologias)
 
 :small_blue_diamond: [Instalações e Dependências](#instalações-e-dependências)
-
-:small_blue_diamond: [Instalações e Dependências 2ª parte](#instalações-e-dependências-2ª-parte)
 
 :small_blue_diamond: [Vídeo do projeto](#vídeo-do-projeto)
 
 :small_blue_diamond: [Documentação](#documentação)
 
-:small_blue_diamond: [Documentação 2ª parte](#documentação-2ª-parte)
+:small_blue_diamond: [Finalizando front-end mobile do app e Testes no React Native](#finalizando-front-end-mobile-do-app-e-testes-no-react-native)
 
 ## Descrição do projeto
 
@@ -90,6 +86,25 @@ Em conectando com a API, temos o cadastro na aplicação, a autenticação de us
 :boom: ip addr → Android com físico: IP da máquina
 - baseURL: 'http://IP da máquina:3333'
 
+:boom: ip addr
+
+:boom: yarn add @react-native-community/datetimepicker
+
+:boom: yarn add date-fns
+
+:boom: cd ~/Flipper-linux
+- ./flipper
+
+:boom: yarn add --dev react-native-testing-library
+
+:boom: yarn add --dev @testing-library/jest-native
+
+:boom: yarn test
+
+:boom: yarn test --watchAll true
+
+:boom: yarn test --coverage
+
 ## Documentação
 
 > <a href="https://www.notion.so/Padr-es-de-projeto-com-ESLint-Prettier-e-EditorConfig-0b57b47a24724c859c0cf226aa0cc3a7" target="_blank">Padrões de projeto com ESLint, Prettier e EditorConfig</a>
@@ -100,38 +115,37 @@ Em conectando com a API, temos o cadastro na aplicação, a autenticação de us
 
 > <a href="https://stackoverflow.com/questions/51026532/json-server-cannot-access-via-local-ip" target="_blank">Json-server cannot access via local IP</a>
 
+> <a href="https://fbflipper.com/" target="_blank">Flipper</a>
+
+> <a href="https://www.notion.so/Configurando-o-Image-Picker-para-o-Android-d1a4ec6ca7c34ad59e7a68ec0d2b2e19" target="_blank">Configurando o Image Picker para o Android</a>
+
 ## Vídeo do projeto
 
 <p align="justify">
+  - No terminal dentro da pasta do projeto do servidor back-end, executa o docker e yarn dev:server;
 
+  - Faz a Requisição no Insomnia.
+
+  - No terminal dentro da pasta do projeto, executa dois terminais, um com npm start e o outro com npx react-native run-android --no-jetifier.
+
+  - Vídeo da tela mobile com a tela de login, agendamento de dia e horário, tela de confirmação e tela de perfil.
 </p>
 
 ![07-appgobarber1](https://user-images.githubusercontent.com/54650669/110564125-1d4b8f00-812b-11eb-8d12-204dfa248c24.gif)
 
+<p align="justify">
+  - Vídeo da tela mobile com a tela de cadastro, tela de login e agendamento de dia e horário.
+</p>
+
 ![07-appgobarber2](https://user-images.githubusercontent.com/54650669/110564743-2426d180-812c-11eb-9e44-d5014965f933.gif)
 
-## <h1>Finalizando front-end mobile do app</h1>
+## <h1>Finalizando front-end mobile do app e Testes no React Native</h1>
 
 <p align="justify">
   Finalizando o aplicativo mobile com React Native do GoBarber que será utilizado pelos clientes para agendar serviços com os prestadores. Vamos iniciar pelo ajustes na API, listando os providers com serialização, colocando endereço das imagens, criação das páginas e rotas. No Dashboard, temos o Header do Dashboard, a busca de providers da API e a listagem de prestadores. No agendamento, temos a criação da estrutura, a alternação entre providers, a criação do Picker de data, a busca da disponibilidade da API, a debugação do app com Flipper, a disponibilidade por período, mostrando horários em tela e criação do agendamento. Na página de sucesso, temos a criação da estrutura da tela e a formatação da data. No perfil, temos a criação da tela de perfil e a atualização dos dados.
+
+  Referente aos Testes no React Native será necessário realizar a configuração de ambiente.
 </p>
-
-## Instalações e Dependências 2ª parte
-
-:boom: ip addr
-
-:boom: yarn add @react-native-community/datetimepicker
-
-:boom: yarn add date-fns
-
-:boom: cd ~/Flipper-linux
-- ./flipper
-
-## Documentação 2ª parte
-
-> <a href="https://fbflipper.com/" target="_blank">Flipper</a>
-
-> <a href="https://www.notion.so/Configurando-o-Image-Picker-para-o-Android-d1a4ec6ca7c34ad59e7a68ec0d2b2e19" target="_blank">Configurando o Image Picker para o Android</a>
 
 ## Desenvolvedores/Contribuintes :octocat:
 
