@@ -34,4 +34,6 @@
 
 > <a href="https://github.com/rocketseat-education" target="_blank">Rocketseat Education</a>
 
+> <a href="https://gist.github.com/diego3g/b1b189063d21b96d6144ca896755be64" target="_blank">Rocketseat settings.json</a>
+
 
