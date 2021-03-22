@@ -117,6 +117,8 @@ Em conectando com a API, temos o cadastro na aplicação, a autenticação de us
 
 > <a href="https://fbflipper.com/" target="_blank">Flipper</a>
 
+> <a href="https://dev.to/birobirobiro/como-criar-um-atalho-com-icone-do-flipper-no-linux-53c7" target="_blank">Criando um atalho do Flipper </a>
+
 > <a href="https://www.notion.so/Configurando-o-Image-Picker-para-o-Android-d1a4ec6ca7c34ad59e7a68ec0d2b2e19" target="_blank">Configurando o Image Picker para o Android</a>
 
 ## Vídeo do projeto
